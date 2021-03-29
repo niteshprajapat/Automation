@@ -97,7 +97,8 @@ def medium_blog():
                             pwd_fb_add.send_keys(email_fb, sleep(2) ,Keys.ENTER)
 
 
-
+### starts from here --->>>>>>
+### starts from here --->>>>>>
 
                 elif (ask == "yes" or ask == "Yes" or ask == "YES"):   
                     sleep(2)
