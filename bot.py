@@ -82,7 +82,20 @@ def medium_blog():
                                 sleep(1)
                             
                             google_func()
-                            
+
+                        
+                        elif choice == "facebook":
+                            fb_option = driver.find_element(By.ID, 'susi-modal-fb-button').click()
+                            sleep(2)
+
+                            email_fb = pyautogui.prompt("Enter your Email here..")
+                            email_fb_add = driver.find_element(By.ID, 'email')
+                            email_fb_add.send_keys(email_fb)
+                            sleep(2)
+                            pwd_fb = pyautogui.prompt("Enter your Password here..")
+                            pwd_fb_add = driver.find_element(By.ID, 'pass')
+                            pwd_fb_add.send_keys(email_fb, sleep(2) ,Keys.ENTER)
+
 
 
 
