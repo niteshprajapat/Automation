@@ -134,6 +134,33 @@ def medium_blog():
                         pwd_fb_add.send_keys(email_fb, sleep(2) ,Keys.ENTER)
 
 
+                    elif ask_option == "twitter":
+                        twitterrr = driver.find_element(By.ID, 'susi-modal-twitter-button').click()
+                        sleep(2)
+
+                        twitterr_email = pyautogui.prompt("Enter valid Email ID ...")
+                        twit_email = driver.find_element(By.ID, 'username_or_email').send_keys(twitterr_email)
+                        sleep(2)
+                        twitterr_pwd = pyautogui.prompt("Enter Password ...")
+                        twit_email = driver.find_element(By.ID, 'password').send_keys(twitterr_pwd)
+                        sleep(2)
+
+                        check_box = driver.find_element(By.ID, 'remember').click()
+                        check_box.send_keys(Keys.ENTER)
+
+                    elif ask_option == "email":
+                        emmmail = driver.find_element(By.ID, 'susi-modal-email-button').click()
+                        sleep(2)
+
+                        email_email = pyautogui.prompt("Enter valid Email ID....")
+                        sleep(2)
+
+                        email_entry = driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div/div[1]/div/div/div[3]/div/div[1]/div/div/div[2]/div/p/input').click()
+                        email_entry.send_keys(email_email, Keys.ENTER)
+                        sleep(3)
+
+                        ok = driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div/div[1]/div/div[1]/div[3]/div/button').click()
+
 
 
 
