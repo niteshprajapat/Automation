@@ -79,7 +79,8 @@ def medium_blog():
                                 email_signin.send_keys(email_add, Keys.ENTER)
 
                                 pwd = pyautogui.password("Enter password here....")
-                                sleep(1)
+                                pwd_google = driver.find_element(By.ID, 'password').send_keys(pwd, sleep(2), Keys.ENTER)
+                                
                             
                             google_func()
 
@@ -116,7 +117,27 @@ def medium_blog():
                         email_signin.send_keys(email_add, Keys.ENTER)
 
                         pwd = pyautogui.password("Enter password here....")
+                        pwd_google = driver.find_element(By.ID, 'password').send_keys(pwd, sleep(2), Keys.ENTER)
+
                         sleep(1)
+
+                    elif ask_option == "facebook":
+                        fabee = driver.find_element(By.ID, 'susi-modal-fb-button').click()
+                        sleep(2)
+
+                        email_fb = pyautogui.prompt("Enter your Email here..")
+                        email_fb_add = driver.find_element(By.ID, 'email')
+                        email_fb_add.send_keys(email_fb)
+                        sleep(2)
+                        pwd_fb = pyautogui.prompt("Enter your Password here..")
+                        pwd_fb_add = driver.find_element(By.ID, 'pass')
+                        pwd_fb_add.send_keys(email_fb, sleep(2) ,Keys.ENTER)
+
+
+
+
+
+
             except Exception as e:
                 print("Sign-In Error")
 
